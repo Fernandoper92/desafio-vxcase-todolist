@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
+import { TaskModule } from './task/task.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    TaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
