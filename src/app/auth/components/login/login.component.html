@@ -1,0 +1,19 @@
+<section class="login-component">
+  <form [formGroup]="form" class="login-container" (submit)="login()">
+    <h1 class="login-title">Faça login ou registre-se</h1>
+    <input formControlName="username" type="text" placeholder="Usuário" [ngClass]="{
+      'invalid-input':
+      !form.get('username').valid &&
+      form.get('username').dirty}">
+    <input formControlName="password" type="password" placeholder="Senha" [ngClass]="{
+      'invalid-input':
+      !form.get('password').valid &&
+      form.get('password').dirty}">
+    <span *ngIf="incorretCredentials" class="incorret-credentials">Usuário ou senha incorreto(s)</span>
+    <input type="submit" class="login-button" [disabled]="!form.valid" value="Entrar">
+    <p class="register">
+      Ainda não tem cadastro?<br>
+      <a>Crie uma conta.</a>
+    </p>
+  </form>
+</section>

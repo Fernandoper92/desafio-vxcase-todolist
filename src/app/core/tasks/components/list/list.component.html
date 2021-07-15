@@ -1,0 +1,18 @@
+<div class="list-container">
+  <div *ngFor="let task of tasks">
+    <p>{{ task?.titulo }}</p>
+    <p>{{ task?.descricao }}</p>
+    <button (click)="deleteTask(task?.id)">delete</button>
+  </div>
+</div>
+
+<form class="form-container" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <label for="task">Tarefa</label>
+  <input id="task" type="text" formControlName="titulo" placeholder="Tarefa">
+
+  <label for="description">Descrição</label>
+  <input id="description" type="text" formControlName="descricao" placeholder="Descrição">
+
+  <button type="submit">Adicionar</button>
+</form>

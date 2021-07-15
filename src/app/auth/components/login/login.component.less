@@ -1,0 +1,78 @@
+.login-component {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    .login-title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    input {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .invalid-input {
+      border-color: red;
+    }
+
+    .incorret-credentials {
+      color: red;
+      margin-bottom: 15px;
+    }
+
+    .login-button {
+      all: unset;
+      width: 100%;
+      height: 35px;
+      color: white;
+      background-color: rgb(18, 118, 248);
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      margin-bottom: 15px;
+
+      &:hover {
+        background-color: rgb(1, 58, 201);
+      }
+
+      &:active {
+        background-color: rgb(82, 131, 255);
+      }
+
+      &:disabled {
+        background-color: #aaa;
+        cursor: default;
+      }
+    }
+
+    .register {
+      text-align: center;
+      margin: 0;
+
+      a {
+        text-decoration: underline;
+        color: rgb(18, 118, 248);
+      }
+    }
+  }
+}
