@@ -1,8 +1,21 @@
 <div class="list-container">
-  <div *ngFor="let task of tasks">
-    <p>{{ task?.titulo }}</p>
-    <p>{{ task?.descricao }}</p>
-    <button (click)="deleteTask(task?.id)">delete</button>
+  <div><input type="text" placeholder="Buscar tarefa"></div>
+  <span class="btn new-task"><p>Adicionar Tarefa</p></span>
+  <div class="task-container" *ngFor="let task of tasks">
+    <input 
+    class="checkbox"
+    type="checkbox"
+    [value]="task?.id"
+    [checked]="task?.concluida"
+    (click)="editTask(task)">
+    <div class="task-info-container">
+      <p class="task-title">{{ task?.titulo }}</p>
+      <p class="task-description">{{ task?.descricao }}</p>
+    </div>
+    <div class="btn-container">
+      <span class="btn edit"><img src="../../../../../assets/001-edit.png" alt=""></span>
+      <span class="btn delete" (click)="deleteTask(task?.id)"><img src="../../../../../assets/002-delete.png" alt=""></span>
+    </div>
   </div>
 </div>
 
@@ -16,3 +29,4 @@
 
   <button type="submit">Adicionar</button>
 </form>
+

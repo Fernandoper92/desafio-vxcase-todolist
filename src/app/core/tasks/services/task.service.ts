@@ -17,8 +17,8 @@ taskUrl = 'http://localhost:3000/tarefas/';
     return this.http.post(this.taskUrl, data);
   }
 
-  putTask(data: any, id: number) {
-    return this.http.put(this.taskUrl+id, data);
+  putTask(data: any) {
+    return this.http.put(this.taskUrl+data.id, data);
   }
 
   deleteTask(id) {

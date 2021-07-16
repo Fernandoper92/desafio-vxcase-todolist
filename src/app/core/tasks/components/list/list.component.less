@@ -1,4 +1,103 @@
-.list-container, .form-container {
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin: 10px 10px 10px 0;
+    transition: all 0.2s ease-in-out;
+
+    &.new-task {
+        background-color: #03a631;
+    }
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    .task-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        height: fit-content;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    
+
+        input.checkbox {
+            cursor: pointer;
+            margin: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .task-info-container {
+            width: 39vw;
+
+            .task-title {
+                font-weight: bold;
+            }
+
+            .task-description {
+                color: dimgray;
+            }
+        }
+
+        .btn-container {
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+                height: fit-content;
+                padding: 5px;
+                margin: 10px 10px 10px 0;
+                transition: all 0.2s ease-in-out;
+
+                &.edit {
+                    background-color: #F28705;
+
+                    &:hover {
+                        background-color: #d27504;
+                      }
+                
+                    &:active {
+                        background-color: #ef972b;
+                      }
+                }
+
+                &.delete {
+                    background-color: #F20505;
+
+                    &:hover {
+                        background-color: #d30505;
+                      }
+                
+                    &:active {
+                        background-color: #eb2c2c;
+                      }
+                }
+            }
+        }
+    }
+}
+
+.form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
